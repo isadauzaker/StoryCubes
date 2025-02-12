@@ -1,0 +1,47 @@
+.logo-body{
+    height: 200px;
+    margin: 20px 0;
+}
+
+.container-body {
+    text-align: center;
+    background-color: #C6A8D8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #FDF5E6;
+    font-size: 50px;
+    font-weight: bold;
+}
+h2{
+    color: #C6A8D8;  
+}
+.sorteio {
+    background-color: #FFF8E7;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+ .sorteio button {
+    background-color: #C6A8D8; 
+    color: #FDF5E6;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 20px;
+}
+
+.sorteio button:hover {
+    background-color: #b191c0; 
+}
