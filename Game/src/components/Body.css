@@ -1,47 +1,62 @@
-.logo-body{
-    height: 200px;
-    margin: 20px 0;
-}
-
 .container-body {
     text-align: center;
-    background-color: #C6A8D8;
-    height: 100vh;
+    background-color: #DCC6F2;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative; 
 }
 
 h1 {
-    color: #FDF5E6;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bold;
+    text-transform: uppercase;
+    color: #FDF5E6;
+    text-shadow: 2px 2px 0px #ad9cd2, 4px 4px 0px #af7dc0;
+    margin: 5px 0;
 }
-h2{
-    color: #C6A8D8;  
+
+
+.estrela {
+    width: 400px;
 }
+
+
 .sorteio {
-    background-color: #FFF8E7;
-    height: 500px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    border-radius: 20px;
-    padding: 50px;
+    background-color: #F5EAFD;
+    padding: 80px; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #9b89c3;
+    width: 350px; 
 }
 
- .sorteio button {
-    background-color: #C6A8D8; 
-    color: #FDF5E6;
-    font-size: 16px;
+.emoji-text {
+    font-size: 1.5rem;
     font-weight: bold;
-    border: none;
-    padding: 20px 25px;
-    border-radius: 20px;
+    color: #6D5B96;
 }
 
-.sorteio button:hover {
-    background-color: #b191c0; 
+.emoji {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #E2BFFF;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #9b89c3;
+    color: #fff;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #D29EF2;
 }
