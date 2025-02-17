@@ -9,11 +9,16 @@ function Body() {
         '🎃','🥚','🍢','🧃','🍽️','🍑','🥒','🥕','🌺','🍄‍🟫','🫛','🚔','🚜','🛹',
         '🚋','🛫','🚢','🚩','🏞️','🌅','🧽','🌑','🌈','🖤'];
 
-        const [emoji, setEmoji] = useState(null);
+        const [sorteados, setSorteados] = useState([]);
 
         function sortearEmoji(){
-            const randomIndex = Math.floor(Math.random() * emojis.length)
-            setEmoji(emojis[randomIndex])
+            if(sorteados.length < 9){
+                const randomIndex = Math.floor(Math.random() * emojis.length)
+                setSorteados([...sorteados, emojis[randomIndex]])
+            }
+        }
+        function reiniciar() {
+            setSorteados([]); 
         }
 
     return (
@@ -22,13 +27,17 @@ function Body() {
             <h1>Histórias em Imagens</h1>
             <img className="estrela" src="./img/estrela.png" alt="" />
 
-            {/* <img className="gatinho" src="./img/gatinho.png" alt="" />
-            <img className="cazinha" src="./img/cazinha.png" alt="" /> */}
-
             <div className='sorteio'>
-            <p className="emoji-text">Emoji Sorteado:</p>
-                {emoji && <p className="emoji">{emoji}</p>}
-                <button onClick={sortearEmoji}>Let’s start!</button>
+            <p className="emoji-text">Emojis Sorteados:</p>
+            
+            <div className='emoji-container'>
+            {sorteados.length > 0 && <p className="emoji">{sorteados.join(' ')}</p>}
+            </div>
+
+            <div className='botao'>
+            <button onClick={sortearEmoji} disabled={sorteados.length >= 9}>Sortear Emoji</button>
+            <button onClick={reiniciar}>Reiniciar</button>
+            </div>
                 
             </div>
         </div>
